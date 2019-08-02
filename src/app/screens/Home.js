@@ -13,7 +13,7 @@ class HomePage extends React.Component{
     }
 
     componentDidMount(){
-        this.getWeatherData('miami','metric')
+        this.getWeatherData('las vegas','metric')
     }
 
 
@@ -51,6 +51,20 @@ class HomePage extends React.Component{
                 return <div>what a cool day today.</div>
             }
         }
+
+
+        // const Rain = function(props){
+        //     console.log(props)
+        
+        //     if (tmp>=30) {
+        //         return<div>it`s kinda hot here.</div>
+        //     } else if(20>=tmp){
+        //         return <div>it`s a little bit cold.</div>
+        //     } 
+        //     else {
+        //         return <div>what a cool day today.</div>
+        //     }
+        // }
 
          return (
              <Container>
