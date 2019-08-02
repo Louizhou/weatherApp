@@ -9,6 +9,9 @@ class Form extends React.Component{
         }
 
         this.handleI1 = this.handleI1.bind(this)
+        this.handleI2 = this.handleI2.bind(this)
+
+        this.handleSubmit = this.handleSubmit.bind(this)
 
     }
 
@@ -23,7 +26,7 @@ class Form extends React.Component{
 
         return <div>
 
-            <form>
+            <form onSubmit={this.handleSubmit}>
        
         
              <div>
@@ -34,7 +37,7 @@ class Form extends React.Component{
 
             <div>
              <label>Imput1</label>
-             <input id = 'i2' value={i2}/>
+             <input id = 'i2' value={i2} onChange={this.handleI2}/>
             </div>
 
 
@@ -49,8 +52,7 @@ class Form extends React.Component{
              <input id = 'i4' value={i4}/>
             </div>
 
-
-
+            <button>Submit</button>
 
             </form>
         </div>
@@ -63,6 +65,20 @@ class Form extends React.Component{
         this.setState({
             i1:ev.target.value
         })
+    }
+
+    handleI2(ev) {
+        console.log(ev.target.value)
+        this.setState({
+            i2:ev.target.value
+        })
+    }
+
+
+    handleSubmit(ev){
+    ev.preventDefaul();
+    console.log(ev)
+
     }
 
 }
